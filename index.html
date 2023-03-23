@@ -8,7 +8,7 @@
     <style type="text/css">
         .baixo:not(#br,#bl){
             border-bottom: 0px;
-            border-top-width: 5px black;
+            border-top-width: 10px black;
             border-left-width: 0px black;
             border-right-width: 0px black;
             border-style: solid;
@@ -17,7 +17,7 @@
         #bl{
             border-bottom: 0px;
             border-left: 0px;
-            border-top-width: 5px black;
+            border-top-width: 10px black;
             border-left-width: 0px black;
             border-right-width: 0px black;
             border-style: solid;
@@ -26,14 +26,14 @@
         #br{
             border-bottom: 0px;
             border-right: 0px;
-            border-top-width: 5px black;
+            border-top-width: 10px black;
             border-left-width: 0px black;
             border-right-width: 0px black;
             border-style: solid;
         }
         .cima:not(#cl,#cb){
             border-top: 0px;
-            border-top-width: 5px black;
+            border-top-width: 10px black;
             border-left-width: 0px black;
             border-right-width: 0px black;
             border-style: solid;
@@ -41,7 +41,7 @@
         #cl{
             border-top: 0px;
             border-left: 0px;
-            border-top-width: 5px black;
+            border-top-width: 10px black;
             border-left-width: 0px black;
             border-right-width: 0px black;
             border-style: solid;
@@ -49,27 +49,27 @@
         #cb{
             border-top: 0px;
             border-right: 0px;
-            border-top-width: 5px black;
+            border-top-width: 10px black;
             border-left-width: 0px black;
             border-right-width: 0px black;
             border-style: solid;
         }
          .meio:not(#dk,#du){
-            border-top-width: 5px black;
+            border-top-width: 10px black;
             border-left-width: 0px black;
             border-right-width: 0px black;
             border-style: solid;
          }
          #dk{
-            border-top-width: 5px black;
+            border-top-width: 10px black;
             border-left-width: 0px black;
             border-left: 0px ;
             border-right-width: 0px black;
             border-style: solid;
          }
          #du{
-            border-right: 5px;
-            border-top-width: 5px black;
+            border-right: 10px;
+            border-top-width: 10px black;
             border-left-width: 0px black;
             border-right: 0px;
             border-right-width: 0px black;
@@ -77,12 +77,35 @@
          }
 
          .cirgulo{
-            border-top: 5px black solid;
-            border-left: 5px black solid;
-            border-right: 5px black solid;
-            border-bottom: 5px black solid;
+            border-top:5px black solid;
+            border-left:5px black solid;
+            border-right:5px black solid;
+            border-bottom:5px black solid;
             padding: 30px;
             border-radius: 50%;
+         }
+         .x{
+            border-bottom:5px black solid;
+            z-index: -1;
+            transform: rotate(45deg);
+            position: relative;
+            border-radius: 30px;
+         }
+         .x2{
+            position: relative;
+            left: 0px;
+            top: -5px;
+            border-radius: 10px;
+            border-bottom:5px black solid;
+            z-index: 2;
+            transform: rotate(-45deg);
+         }
+         table{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-collapse: collapse;
          }
     </style>
 </head>
@@ -90,17 +113,17 @@
     <table>
         <tr>
             <td class="cima" id="cl"><div class="cirgulo"></div></td>
-            <td class="cima">a</td>
-            <td class="cima" id="cb">a</td>
+            <td class="cima"></td>
+            <td class="cima" id="cb"><div class="x"></div><div class="x2"></div></td>
         </tr>
         <tr>
-            <td class="meio" id="dk">d</td>
+            <td class="meio" id="dk"><div class="x"></div><div class="x2"></div></td>
             <td class="meio"><div class="cirgulo"></div></td>
-            <td class="meio" id="du">d</td>
+            <td class="meio" id="du"></td>
         </tr>
         <tr>
-            <td class="baixo" id="bl">s</td>
-            <td class="baixo">s</td>
+            <td class="baixo" id="bl"></td>
+            <td class="baixo"></td>
             <td class="baixo" id="br"><div class="cirgulo"></div></td>
         </tr>
     </table>
